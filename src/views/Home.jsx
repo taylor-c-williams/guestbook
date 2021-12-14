@@ -7,7 +7,7 @@ import { EntryProvider } from '../context/EntryContext';
 export default function Home() {
   return (
     <EntryProvider>
-      {/* <Header /> */}
+      <Header />
       sup
       <EntryForm />
       <EntryList />
