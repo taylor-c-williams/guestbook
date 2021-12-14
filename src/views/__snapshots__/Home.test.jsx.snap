@@ -2,7 +2,6 @@
 
 exports[`should render the Home view 1`] = `
 <div>
-  <div />
   sup
   <div />
   <div />

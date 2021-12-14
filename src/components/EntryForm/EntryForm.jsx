@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
+import './entry-form.css';
 
 export default function EntryForm() {
   return (
-    <div>
-      
-    </div>
-  )
+    <section className="entry-form">
+      <fieldset>
+        <form>
+          <input value="dingus" />
+          <input value="brownunder" />
+          <input type="submit" />
+        </form>
+      </fieldset>
+    </section>
+  );
 }

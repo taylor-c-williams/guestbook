@@ -6,11 +6,13 @@ import { EntryProvider } from '../context/EntryContext';
 
 export default function Home() {
   return (
-    <EntryProvider>
-      <Header />
-      sup
-      <EntryForm />
-      <EntryList />
-    </EntryProvider>
+    <main>
+      <EntryProvider>
+        <Header />
+        sup
+        <EntryForm />
+        <EntryList />
+      </EntryProvider>
+    </main>
   );
 }
