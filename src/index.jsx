@@ -1,4 +1,9 @@
 import { render } from 'react-dom';
+import { UserProvider } from './context/UserContext'
 import App from './App';
 
-render(<App />, document.getElementById('root'));
+render(
+<UserProvider>
+<App />
+</UserProvider>
+, document.getElementById('root'));
