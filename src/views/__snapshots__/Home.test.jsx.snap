@@ -1,9 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render the Home view 1`] = `
-<div>
-  sup
-  <div />
-  <div />
-</div>
-`;
+exports[`should render the Home view 1`] = `undefined`;
