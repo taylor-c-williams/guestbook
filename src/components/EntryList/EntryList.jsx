@@ -1,6 +1,18 @@
 import React from 'react';
+import { useEntries } from '../../hooks/useEntries';
 import './entry-list.css';
 
 export default function EntryList() {
-  return <section className="entry-list">individual entries here</section>;
+  const { entries } = useEntries();
+  return (
+    <section className="entry-list">
+      <ul>
+        {entries.map((entry) => {
+          return (
+            <li key={`${entry.name}-${entry.message}`}>{entry.message}</li>
+          );
+        })}
+      </ul>
+    </section>
+  );
 }
