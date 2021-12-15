@@ -9,7 +9,6 @@ export default function Home() {
     <main>
       <EntryProvider>
         <Header />
-        sup
         <EntryForm />
         <EntryList />
       </EntryProvider>

@@ -1,7 +1,6 @@
 .entry-form {
   padding: 25px;
   margin: 35px;
-  background-color: orange;
   color: rgb(70, 70, 70);
   display: flex;
   flex-direction: column;
