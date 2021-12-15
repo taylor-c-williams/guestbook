@@ -4,5 +4,5 @@ import './header.css';
 
 export default function Header() {
   const { user } = useUser();
-  return <header>Header Hi my name is {user}</header>;
+  return <header>{user ? `Signing as  ${user}` : null}</header>;
 }

@@ -30,7 +30,6 @@ export default function EntryForm() {
     setUser(name);
     setEntries([...entries, { name, message: guestEntry }]);
     setGuestEntry('');
-    // setName('');
   };
 
   return (
@@ -45,6 +44,16 @@ export default function EntryForm() {
             onChange={(e) => setGuestEntry(e.target.value)}
           />
           <button type="submit">Submit!</button>
+          {user ? (
+            <button
+              onClick={() => {
+                setUser('');
+                setName('');
+              }}
+            >
+              Not {user}? Log Out!
+            </button>
+          ) : null}
         </form>
       </fieldset>
     </section>

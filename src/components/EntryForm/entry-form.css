@@ -23,3 +23,7 @@ input {
 button {
   margin: 10px;
 }
+
+textarea {
+  margin: 10px;
+}
