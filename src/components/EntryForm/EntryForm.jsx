@@ -1,8 +1,7 @@
-import React from 'react';
-import './entry-form.css';
 import { useState } from 'react';
 import { useUser } from '../../hooks/useUser';
 import { useEntries } from '../../hooks/useEntries';
+import './entry-form.css';
 
 export default function EntryForm() {
   const [name, setName] = useState('');
@@ -37,7 +36,7 @@ export default function EntryForm() {
     <section className="entry-form">
       <fieldset>
         <form onSubmit={handleSubmit}>
-          {user ? `Welcome ${name}` : newUserInput}
+          {user ? newUserInput : `Welcome, ${user}`}
 
           <textarea
             id="guestEntry"
@@ -45,15 +44,7 @@ export default function EntryForm() {
             placeholder="Write your message here"
             onChange={(e) => setGuestEntry(e.target.value)}
           />
-          <button
-            type="submit"
-            // onClick={() => {
-            //   setUser('');
-            //   setName('');
-            // }}
-          >
-            Submit!
-          </button>
+          <button type="submit">Submit!</button>
         </form>
       </fieldset>
     </section>
