@@ -30,14 +30,14 @@ export default function EntryForm() {
     setUser(name);
     setEntries([...entries, { name, message: guestEntry }]);
     setGuestEntry('');
+    // setName('');
   };
 
   return (
     <section className="entry-form">
       <fieldset>
         <form onSubmit={handleSubmit}>
-          {user ? newUserInput : `Welcome, ${user}`}
-
+          {user ? `sup ${user}` : newUserInput}
           <textarea
             id="guestEntry"
             value={guestEntry}
