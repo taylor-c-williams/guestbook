@@ -7,22 +7,21 @@ export default function EntryForm() {
   const [name, setName] = useState('');
   const [guestEntry, setGuestEntry] = useState('');
   const { entries, setEntries } = useEntries();
-  const { user, setUser } = useUser();
 
-  const newUserInput = (
-    <input
-      id="name"
-      value={name}
-      type="text"
-      placeholder="Enter your Name"
-      onChange={(e) => setName(e.target.value)}
-    />
-  );
+  // const newUserInput = (
+  //   <input
+  //     id="name"
+  //     value={name}
+  //     type="text"
+  //     placeholder="Enter your Name"
+  //     onChange={(e) => setName(e.target.value)}
+  //   />
+  // );
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!guestEntry) return;
-    setUser(name);
+    // setUser(name);
     setEntries([...entries, { name, message: guestEntry }]);
     setGuestEntry('');
   };
