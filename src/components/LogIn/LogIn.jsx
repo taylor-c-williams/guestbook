@@ -16,7 +16,7 @@ export default function LogIn() {
       const loginSuccessful =
         username === process.env.AUTH_USERNAME &&
         password === process.env.AUTH_PASSWORD;
-      if (loginSuccessful) setUser({ username });
+      if (loginSuccessful) setUser(username);
       return loginSuccessful;
     };
     const loginSuccessful = login(usernameInput, passwordInput);

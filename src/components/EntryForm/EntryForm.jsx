@@ -6,7 +6,7 @@ import './entry-form.css';
 export default function EntryForm() {
   const [guestEntry, setGuestEntry] = useState('');
   // const { entries, setEntries } = useEntries();
-  const { user } = useUser();
+  const { user, setUser } = useUser();
 
   // const newUserInput = (
   //   <input
