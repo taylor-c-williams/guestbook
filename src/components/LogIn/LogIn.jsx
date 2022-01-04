@@ -19,8 +19,8 @@ export default function LogIn() {
       if (loginSuccessful) setUser(username);
       return loginSuccessful;
     };
-    const loginSuccessful = login(usernameInput, passwordInput);
-    return loginSuccessful
+    const loginWasSuccessful = login(usernameInput, passwordInput);
+    return loginWasSuccessful
       ? history.replace(from)
       : setError('Login Unsuccess');
   };
