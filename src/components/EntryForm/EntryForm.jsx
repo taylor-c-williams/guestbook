@@ -9,11 +9,6 @@ export default function EntryForm() {
   const { entries, setEntries } = useEntries();
   const { user, setUser } = useUser();
 
-  console.log(user, 'user');
-  console.log(guestEntry, 'guest entry');
-  console.log(entries, 'entries');
-  console.log(name, 'name');
-
   const newUserInput = (
     <input
       id="name"
@@ -36,7 +31,10 @@ export default function EntryForm() {
     <section className="entry-form">
       <fieldset>
         <form onSubmit={handleSubmit}>
-          {user ? `sup ${user}` : newUserInput}
+          {/* {user ? 
+          `sup ${user}` 
+          : newUserInput} */}
+          Hello, {user}
           <textarea
             id="guestEntry"
             value={guestEntry}
