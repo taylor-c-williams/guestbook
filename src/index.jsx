@@ -4,8 +4,10 @@ import { EntryProvider } from './context/EntryContext';
 import App from './App';
 
 render(
-  <EntryProvider>
-    <App />
-  </EntryProvider>,
+  <UserProvider>
+    <EntryProvider>
+      <App />
+    </EntryProvider>
+  </UserProvider>,
   document.getElementById('root')
 );

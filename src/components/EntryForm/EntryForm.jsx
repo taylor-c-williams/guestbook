@@ -5,35 +5,23 @@ import './entry-form.css';
 
 export default function EntryForm() {
   const [guestEntry, setGuestEntry] = useState('');
-  // const { entries, setEntries } = useEntries();
-  const { user, setUser } = useUser();
+  const { entries, setEntries } = useEntries();
+  const { user } = useUser();
 
-  // const newUserInput = (
-  //   <input
-  //     id="name"
-  //     value={name}
-  //     type="text"
-  //     placeholder="Enter your Name"
-  //     onChange={(e) => setName(e.target.value)}
-  //   />
-  // );
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   if (!guestEntry) return;
-  //   // setUser(name);
-  //   setEntries([...entries, { user, message: guestEntry }]);
-  //   setGuestEntry('');
-  // };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!guestEntry) return;
+    setEntries([...entries, { name: user, message: guestEntry }]);
+    setGuestEntry('');
+  };
 
   return (
     <section className="entry-form">
       <fieldset>
-        <form>
+        <form onSubmit={handleSubmit}>
           Hello, {user}
           <textarea
             id="guestEntry"
-            value={guestEntry}
             placeholder="Write your message here"
             onChange={(e) => setGuestEntry(e.target.value)}
           />

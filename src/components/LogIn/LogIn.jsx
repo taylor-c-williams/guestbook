@@ -24,9 +24,11 @@ export default function LogIn() {
       ? history.replace(from)
       : setError('Login Unsuccess');
   };
-  console.log('username input:', usernameInput);
-  console.log('password input:', passwordInput);
 
+  // TODO
+  // can I put setUsername and setPassword in User Context?
+  // can I put setUsername and setPassword in User Context?
+  // can I put setUsername and setPassword in User Context?
   return (
     <div>
       <fieldset className="w-1/4 border p-4">
