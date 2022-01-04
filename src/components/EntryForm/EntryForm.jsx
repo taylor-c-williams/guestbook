@@ -4,9 +4,9 @@ import { useEntries } from '../../hooks/useEntries';
 import './entry-form.css';
 
 export default function EntryForm() {
-  const [name, setName] = useState('');
   const [guestEntry, setGuestEntry] = useState('');
-  const { entries, setEntries } = useEntries();
+  // const { entries, setEntries } = useEntries();
+  const { user } = useUser();
 
   // const newUserInput = (
   //   <input
@@ -18,21 +18,18 @@ export default function EntryForm() {
   //   />
   // );
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!guestEntry) return;
-    // setUser(name);
-    setEntries([...entries, { name, message: guestEntry }]);
-    setGuestEntry('');
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (!guestEntry) return;
+  //   // setUser(name);
+  //   setEntries([...entries, { user, message: guestEntry }]);
+  //   setGuestEntry('');
+  // };
 
   return (
     <section className="entry-form">
       <fieldset>
-        <form onSubmit={handleSubmit}>
-          {/* {user ? 
-          `sup ${user}` 
-          : newUserInput} */}
+        <form>
           Hello, {user}
           <textarea
             id="guestEntry"
@@ -41,16 +38,6 @@ export default function EntryForm() {
             onChange={(e) => setGuestEntry(e.target.value)}
           />
           <button type="submit">Submit!</button>
-          {user ? (
-            <button
-              onClick={() => {
-                setUser('');
-                setName('');
-              }}
-            >
-              Not {user}? Log Out!
-            </button>
-          ) : null}
         </form>
       </fieldset>
     </section>

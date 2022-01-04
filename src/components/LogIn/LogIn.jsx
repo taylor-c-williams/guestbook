@@ -5,18 +5,28 @@ import { useState } from 'react';
 export default function LogIn() {
   const history = useHistory();
   const location = useLocation();
-  const user = useUser();
+  const { user, setUser } = useUser();
   const [usernameInput, setUsernameInput] = useState('');
   const [passwordInput, setPasswordInput] = useState('');
   const { from } = location.state || { from: { pathname: '/' } };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const loginSuccessful = user.login(usernameInput, passwordInput);
+    const login = (username, password) => {
+      const loginSuccessful =
+        username === process.env.AUTH_USERNAME &&
+        password === process.env.AUTH_PASSWORD;
+      if (loginSuccessful) setUser({ username });
+      return loginSuccessful;
+    };
+    const loginSuccessful = login(usernameInput, passwordInput);
     return loginSuccessful
       ? history.replace(from)
       : setError('Login Unsuccess');
   };
+  console.log('username input:', usernameInput);
+  console.log('password input:', passwordInput);
+
   return (
     <div>
       <fieldset className="w-1/4 border p-4">
