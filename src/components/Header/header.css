@@ -1,0 +1,11 @@
+header {
+  width: 100%;
+  height: 100px;
+  padding: 25px;
+  background-color: purple;
+  color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

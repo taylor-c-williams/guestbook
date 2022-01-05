@@ -1,0 +1,29 @@
+.entry-form {
+  padding: 25px;
+  margin: 35px;
+  color: rgb(70, 70, 70);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+fieldset {
+  margin: 25px;
+}
+
+form {
+  padding: 25px;
+}
+
+input {
+  margin: 10px;
+}
+
+button {
+  margin: 10px;
+}
+
+textarea {
+  margin: 10px;
+}
