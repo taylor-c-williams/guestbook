@@ -60,7 +60,7 @@ export default function LogIn() {
             type="submit"
             className="h-12 self-center bg-black text-white p-1 font-bold col-span-2"
           >
-            Sign In
+            Log In
           </button>
         </form>
         <p className="text-center text-red-500 font-bold"></p>
