@@ -1,5 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render the Auth view 1`] = `undefined`;
-
 exports[`should render the Home view 1`] = `undefined`;
