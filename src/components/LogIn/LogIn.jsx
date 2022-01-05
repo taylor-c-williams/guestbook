@@ -5,9 +5,10 @@ import { useState } from 'react';
 export default function LogIn() {
   const history = useHistory();
   const location = useLocation();
-  const { user, setUser } = useUser();
+  const [errorMsg, setErrorMsg] = useState('');
   const [usernameInput, setUsernameInput] = useState('');
   const [passwordInput, setPasswordInput] = useState('');
+  const { user, setUser } = useUser();
   const { from } = location.state || { from: { pathname: '/' } };
 
   const handleSubmit = (e) => {
@@ -22,7 +23,7 @@ export default function LogIn() {
     const loginWasSuccessful = login(usernameInput, passwordInput);
     return loginWasSuccessful
       ? history.replace(from)
-      : setError('Login Unsuccess');
+      : setErrorMsg('Login Unsuccess');
   };
 
   return (
@@ -63,6 +64,7 @@ export default function LogIn() {
           </button>
         </form>
         <p className="text-center text-red-500 font-bold"></p>
+        {errorMsg}
       </fieldset>
     </div>
   );
