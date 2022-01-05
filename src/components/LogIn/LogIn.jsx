@@ -25,10 +25,6 @@ export default function LogIn() {
       : setError('Login Unsuccess');
   };
 
-  // TODO
-  // can I put setUsername and setPassword in User Context?
-  // can I put setUsername and setPassword in User Context?
-  // can I put setUsername and setPassword in User Context?
   return (
     <div>
       <fieldset className="w-1/4 border p-4">
@@ -66,9 +62,7 @@ export default function LogIn() {
             Sign In
           </button>
         </form>
-        <p className="text-center text-red-500 font-bold">
-          Error message goes here
-        </p>
+        <p className="text-center text-red-500 font-bold"></p>
       </fieldset>
     </div>
   );

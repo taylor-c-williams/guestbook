@@ -6,7 +6,7 @@ import './entry-form.css';
 export default function EntryForm() {
   const [guestEntry, setGuestEntry] = useState('');
   const { entries, setEntries } = useEntries();
-  const { user } = useUser();
+  const { user, setUser } = useUser();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -27,6 +27,7 @@ export default function EntryForm() {
           />
           <button type="submit">Submit!</button>
         </form>
+        <button onClick={() => setUser('')}> Not {user}?</button>
       </fieldset>
     </section>
   );
