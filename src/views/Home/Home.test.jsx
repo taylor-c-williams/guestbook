@@ -1,11 +1,11 @@
 import React from 'react';
-import EntryForm from './EntryForm';
+import Home from './Home';
 import { UserContext } from '../../context/UserContext';
 
-it('should render the Auth view', () => {
+it('should render the Home view', () => {
   const { container } = (
     <UserContext>
-      <EntryForm />
+      <Home />
     </UserContext>
   );
   expect(container).toMatchSnapshot();

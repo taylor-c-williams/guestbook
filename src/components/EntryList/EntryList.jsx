@@ -1,4 +1,3 @@
-import React from 'react';
 import { useEntries } from '../../hooks/useEntries';
 import './entry-list.css';
 
